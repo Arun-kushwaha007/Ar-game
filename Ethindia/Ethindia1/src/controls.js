@@ -1,6 +1,3 @@
-import * as THREE from 'three';
-
-
 function easeOutQuad(x) {
   return 1 - (1 - x) * (1 - x);
 }
@@ -30,13 +27,13 @@ export function updatePlaneAxis(x, y, z, planePosition, camera) {
   if (Math.abs(pitchVelocity) > maxVelocity) 
     pitchVelocity = Math.sign(pitchVelocity) * maxVelocity;
 
-  //if (controls["a"]) {
-    //jawVelocity += 0.0025;
-  //}
+  if (controls["a"]) {
+    jawVelocity += 0.0025;
+  }
 
-  //if (controls["d"]) {
-   // jawVelocity -= 0.0025;
-  //}
+  if (controls["d"]) {
+    jawVelocity -= 0.0025;
+  }
 
   if (controls["w"]) {
     pitchVelocity -= 0.0025;
@@ -81,6 +78,4 @@ export function updatePlaneAxis(x, y, z, planePosition, camera) {
   camera.updateProjectionMatrix();
 
   planePosition.add(z.clone().multiplyScalar(-planeSpeed -turboSpeed));
-  
-
 }
