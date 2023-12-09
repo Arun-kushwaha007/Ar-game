@@ -1,6 +1,4 @@
-// App.js
-
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import { PerspectiveCamera, Environment } from "@react-three/drei";
 import { EffectComposer, HueSaturation } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
@@ -9,15 +7,8 @@ import { SphereEnv } from "./SphereEnv";
 import { Airplane } from "./Airplane";
 import { Targets } from "./Targets";
 import { MotionBlur } from "./MotionBlur";
-import { startOpenCv } from "./opencv";
 
 function App() {
-  const planeRef = useRef();
-
-  useEffect(() => {
-    startOpenCv(planeRef.current);
-  }, []);
-
   return (
     <>
       <SphereEnv />
@@ -26,7 +17,7 @@ function App() {
       <PerspectiveCamera makeDefault position={[0, 10, 10]} />
 
       <Landscape />
-      <Airplane ref={planeRef} />
+      <Airplane />
       <Targets />
 
       <directionalLight
