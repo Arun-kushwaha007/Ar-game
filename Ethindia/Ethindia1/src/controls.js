@@ -27,13 +27,13 @@ export function updatePlaneAxis(x, y, z, planePosition, camera) {
   if (Math.abs(pitchVelocity) > maxVelocity) 
     pitchVelocity = Math.sign(pitchVelocity) * maxVelocity;
 
-  if (controls["a"]) {
-    jawVelocity += 0.0025;
-  }
+  //if (controls["a"]) {
+    //jawVelocity += 0.0025;
+  //}
 
-  if (controls["d"]) {
-    jawVelocity -= 0.0025;
-  }
+  //if (controls["d"]) {
+    //jawVelocity -= 0.0025;
+  //}
 
   if (controls["w"]) {
     pitchVelocity -= 0.0025;
