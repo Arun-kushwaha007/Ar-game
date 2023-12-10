@@ -17,12 +17,12 @@ const TARGET_RAD = 0.125;
 export function Targets() {
   const [targets, setTargets] = useState(() => {
     const arr = [];
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 50; i++) {
       arr.push({
-        center: randomPoint(new Vector3(4, 1, 4)).add(
-          new Vector3(0, 2 + Math.random() * 2, 0)
+        center: randomPoint(new Vector3(0, 0.25, 10)).add(
+          new Vector3(0, 3, 0)
         ),
-        direction: randomPoint().normalize(),
+        direction: new Vector3(0, 0, 1),
         hit: false,
       });
     }
@@ -34,7 +34,7 @@ export function Targets() {
     let geo;
 
     targets.forEach((target) => {
-      const torusGeo = new TorusGeometry(TARGET_RAD, 0.02, 8, 25);
+      const torusGeo = new TorusGeometry(TARGET_RAD, 0.02, 8, 50);
       torusGeo.applyQuaternion(
         new Quaternion().setFromUnitVectors(
           new Vector3(0, 0, 1),

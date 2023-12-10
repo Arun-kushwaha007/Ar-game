@@ -1,3 +1,17 @@
+async function fetchData() {
+  let apiUrl = "http://localhost:3000/value"
+  return fetch(apiUrl)
+    .then(response => {
+      return response.json();
+    })
+    .then(data => {
+      return JSON.parse(data).result
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error.message);
+    });
+}
+
 function easeOutQuad(x) {
   return 1 - (1 - x) * (1 - x);
 }
@@ -17,7 +31,7 @@ let pitchVelocity = 0;
 let planeSpeed = 0.006;
 export let turbo = 0;
 
-export function updatePlaneAxis(x, y, z, planePosition, camera) {
+export async function updatePlaneAxis(x, y, z,  planePosition) {
   jawVelocity *= 0.95;
   pitchVelocity *= 0.95;
 
@@ -27,31 +41,14 @@ export function updatePlaneAxis(x, y, z, planePosition, camera) {
   if (Math.abs(pitchVelocity) > maxVelocity) 
     pitchVelocity = Math.sign(pitchVelocity) * maxVelocity;
 
-  //if (controls["a"]) {
-    //jawVelocity += 0.0025;
-  //}
-
-  //if (controls["d"]) {
-    //jawVelocity -= 0.0025;
-  //}
-
-  if (controls["w"]) {
+  let myVariable = await fetchData()
+  if (myVariable === "up") {
+    pitchVelocity += 0.00125;
+  }
+  if (myVariable === "down") {
     pitchVelocity -= 0.0025;
   }
-
-  if (controls["s"]) {
-    pitchVelocity += 0.0025;
-  }
-
-  if (controls["r"]) {
-    jawVelocity = 0;
-    pitchVelocity = 0;
-    turbo = 0;
-    x.set(1, 0, 0);
-    y.set(0, 1, 0);
-    z.set(0, 0, 1);
-    planePosition.set(0, 3, 7);
-  }
+  console.log(myVariable)
 
   x.applyAxisAngle(z, jawVelocity);
   y.applyAxisAngle(z, jawVelocity);
@@ -73,9 +70,6 @@ export function updatePlaneAxis(x, y, z, planePosition, camera) {
   turbo = Math.min(Math.max(turbo, 0), 1);
 
   let turboSpeed = easeOutQuad(turbo) * 0.02;
-
-  camera.fov = 45 + turboSpeed * 900;
-  camera.updateProjectionMatrix();
 
   planePosition.add(z.clone().multiplyScalar(-planeSpeed -turboSpeed));
 }

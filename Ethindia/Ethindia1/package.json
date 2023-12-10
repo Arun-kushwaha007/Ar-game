@@ -3,8 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "proxy": "http://localhost:3000",
   "scripts": {
     "dev": "vite",
+    "server": "node src/server",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -14,6 +16,10 @@
     "@react-three/fiber": "8.12.0",
     "@react-three/postprocessing": "^2.14.9",
     "@types/three": "^0.152.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "keypress": "^0.2.1",
+    "react": "^18.2.0",
     "three": "^0.153.0"
   },
   "devDependencies": {
