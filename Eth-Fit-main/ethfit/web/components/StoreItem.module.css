@@ -1,0 +1,131 @@
+.container {
+    border-width: 1px;
+    border-color: var(--theme-300);
+    border-style: solid;
+    box-shadow: var(--shadow-sm);
+    width: 364px;
+    background-color: var(--theme-bg);
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    margin: auto;
+    border-radius: 12px;
+  }
+  
+  .image {
+    height: 224px;
+    align-self: stretch;
+    min-width: 364px;
+  }
+  
+  .titleContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: start;
+    align-self: stretch;
+    min-width: 334px;
+    padding: 16px;
+  }
+  
+  .statsContainer {
+    border: solid;
+    border-color: var(--theme-100);
+    border-width: 2px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: flex-start;
+    align-items: start;
+    align-self: stretch;
+    min-width: 334px;
+    padding: 16px;
+  }
+  
+  .textContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .gatedText {
+    display: flex;
+    font-size: 14px;
+    font-family: Shapiro;
+    font-weight: 400;
+    letter-spacing: -0.56px;
+    line-height: 20px;
+    color: var(--theme-600);
+    border-width: 1px;
+    border-color: var(--theme-600);
+    border-style: solid;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: start;
+    border-radius: 12px;
+    padding: 4px 8px;
+  }
+  
+  .coin {
+    width: 16px;
+    height: 100%;
+  }
+  
+  .icon {
+    font-size: 14px;
+    font-family: "Font Awesome 6 Pro";
+    font-weight: 400;
+    letter-spacing: -0.56px;
+    line-height: 20px;
+    color: var(--theme-900);
+  }
+  
+  .footerContainer {
+    background-color: var(--theme-alt-bg);
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: start;
+    align-self: stretch;
+    min-width: 334px;
+    padding: 12px 16px;
+  }
+  
+  .footerIcon {
+    display: flex;
+    font-size: 13px;
+    font-family: "Font Awesome 6 Pro";
+    font-weight: 400;
+    letter-spacing: -0.52px;
+    line-height: 20px;
+    border-width: 1px;
+    border-color: var(--theme-200);
+    border-style: solid;
+    box-shadow: var(--shadow-sm);
+    background-color: var(--theme-bg);
+    flex-direction: row;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80px;
+    padding: 4px 12px;
+    box-sizing: content-box;
+    cursor: pointer;
+    color: var(--theme-600);
+  }
+  
+  .footerIcon:hover {
+    box-shadow: var(--shadow-xs);
+  }
+  
+  .red {
+    color: var(--error);
+  }
+  

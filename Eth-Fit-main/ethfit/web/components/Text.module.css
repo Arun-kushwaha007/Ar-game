@@ -1,0 +1,181 @@
+.XS {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.04em;
+  }
+  
+  .text {
+    white-space: pre-line;
+  }
+  
+  .semibold {
+    font-weight: var(--semi-bold);
+  }
+  
+  .medium {
+    font-family: "Shapiro-Medium";
+  }
+  
+  .S {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+  }
+  
+  .M {
+    font-style: normal;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.04em;
+  }
+  
+  .L {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.04em;
+  }
+  
+  .XL {
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.04em;
+  }
+  
+  .XXS {
+    font-style: normal;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -0.04em;
+  }
+  
+  .clamp {
+    white-space: pre-line;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+  
+  .modeBackground {
+    color: var(--theme-bg);
+  }
+  
+  .modeOnBackground {
+    color: var(--theme-900);
+  }
+  
+  .accentGrey {
+    color: var(--theme-500);
+  }
+  
+  .onBackgroundGrey {
+    color: var(--theme-900);
+  }
+  
+  .brandPrimary {
+    color: var(--bonfire-primary);
+  }
+  
+  .brandOnPrimary {
+    color: var(--white);
+  }
+  
+  .success {
+    color: var(--success);
+  }
+  
+  .onSuccess {
+    color: var(--black);
+  }
+  
+  .vertical {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .error {
+    color: var(--error);
+  }
+  
+  .h4 {
+    font-weight: var(--bold);
+    font-size: 20px;
+    line-height: 20px;
+  }
+  
+  .h3 {
+    font-weight: var(--bold);
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .h2 {
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: var(--bold);
+  }
+  
+  .h1 {
+    font-weight: var(--bold);
+    font-size: 32px;
+    line-height: 40px;
+  }
+  
+  .themeL1 {
+    color: var(--theme-l1);
+  }
+  
+  .themeL2 {
+    color: var(--theme-l2);
+  }
+  
+  .gray100 {
+    color: var(--theme-100);
+  }
+  
+  .gray200 {
+    color: var(--theme-200);
+  }
+  
+  .gray300 {
+    color: var(--theme-300);
+  }
+  
+  .gray400 {
+    color: var(--theme-400);
+  }
+  
+  .gray500 {
+    color: var(--theme-500);
+  }
+  
+  .gray600 {
+    color: var(--theme-600);
+  }
+  
+  .gray700 {
+    color: var(--theme-700);
+  }
+  
+  .gray800 {
+    color: var(--theme-800);
+  }
+  
+  .gray900 {
+    color: var(--theme-900);
+  }
+  
+  .wide {
+    font-family: "Shapiro-Wide";
+  }
+  
+  .success {
+    color: var(--success);
+  }
+  
