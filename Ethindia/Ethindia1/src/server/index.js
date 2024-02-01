@@ -12,6 +12,7 @@ app.use(cors())
 
 app.get('/up', (request, response) => {
   myVariable = "up"
+  response.send("hello");
 });
 
 app.get('/value', (request, response) => {
