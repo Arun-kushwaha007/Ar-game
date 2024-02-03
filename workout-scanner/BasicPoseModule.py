@@ -1,6 +1,7 @@
 import cv2
 import mediapipe as mp
 
+
 class poseDetector() :
     
     def __init__(self, mode=False, complexity=1, smooth_landmarks=True,
@@ -54,7 +55,7 @@ def main():
     detector = poseDetector()
     cap = cv2.VideoCapture(0)
     while cap.isOpened():
-        ret, img = cap.read() #ret is just the return variable, not much in there that we will use. 
+        ret, img = cap.read() #ret is just the return variable, not much in thpythonere that we will use. 
         if ret:    
             img = detector.findPose(img)
             cv2.imshow('Pose Detection', img)
